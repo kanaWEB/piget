@@ -1,0 +1,29 @@
+#!/bin/bash
+if [ $(id -u) -ne 0 ]; then
+	echo "Script must be run as root."
+	exit 1
+fi
+
+echo "We are going to prepare our Raspberry Pi"
+echo "Installing lazass bash framework"
+
+if [[ ! -d /opt/scripts ]]
+	then
+		mkdir -p "/opt/scripts/"
+fi
+
+wget https://github.com/madnerds/piget/raw/master/lazass -O /opt/scripts/lazass
+
+if [[ $? -ne 0 ]]
+	then
+		echo "I wasn't able to download lazass"
+		echo "- Check internet connectivity"
+		echo "- Check github status"
+		exit 1
+fi
+
+
+
+
+
+
