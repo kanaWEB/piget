@@ -12,7 +12,7 @@ if [[ ! -d /opt/scripts ]]
 		mkdir -p "/opt/scripts/"
 fi
 
-wget https://github.com/madnerds/piget/raw/master/lazass -O /opt/scripts/lazass
+wget https://raw.githubusercontent.com/madnerds/piget/master/lazass -O /opt/scripts/lazass
 
 if [[ $? -ne 0 ]]
 	then
